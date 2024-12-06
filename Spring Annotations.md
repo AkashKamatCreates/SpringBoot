@@ -35,4 +35,32 @@ public class FunRestController {
 }
 ```
 
-## 
+## @Value 
+The `@Value` annotation in Spring Boot is used to inject values into fields, method parameters, or constructor arguments. These values can come from:
+
+1. **Application properties or YAML files** (e.g., `application.properties` or `application.yml`).
+2. **Environment variables**.
+3. **System properties**.
+4. **Hardcoded values**.
+5. **Default values if the property is not specified**.
+
+in your application.properties:
+```properties
+#defining name properties  
+first.name = akash  
+last.name = kamat
+```
+in the RestController.java:
+```java
+@Value("${first.name}")  
+private String fname;  
+  
+@Value("${last.name}")  
+private String lname;  
+  
+@GetMapping("/fullname")  
+public String fullname(){  
+    return "first name = "+fname+" and last name = "+lname;  
+}
+//output: first name = akash and last name = kamat
+```
