@@ -1,0 +1,16 @@
+springboot has around 1000+ properties that can be added or customized in the application.properties file. 
+- properties such as server port, context path, actruator, security etc can be edited. 
+- properties are roughly grouped in to the following categories:
+	- core
+	- web
+	- security
+	- data
+	- actuator
+	- integration
+	- devtools
+	- testing
+- core properties eg: log levels severity mapping like trace, debug, info, warn etc. 
+- web properites eg: server.port, or context path change or session timeout time.
+- actuator properties eg: endpoint include or exclude and base path changer. 
+- security properties eg: default username and password. 
+- data properties eg: jdbc url, username and pass for database are stored here. 
